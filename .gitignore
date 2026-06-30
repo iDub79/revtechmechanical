@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Cloudflare Wrangler local state
+**/.wrangler/
+
+# Node / Next (also covered by frontend/.gitignore)
+**/node_modules/
+**/.next/
+**/out/
