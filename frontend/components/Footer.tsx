@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Mail } from 'lucide-react'
+import { Phone, MapPin, Clock } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -74,12 +74,6 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-[#E61515] shrink-0" />
                 <a href="tel:0733552248" className="text-sm text-gray-400 hover:text-white transition-colors">
                   (07) 3355 2248
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#E61515] shrink-0" />
-                <a href="mailto:info@revtechmechanical.com.au" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  info@revtechmechanical.com.au
                 </a>
               </li>
             </ul>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Phone, MapPin, Clock, Mail } from 'lucide-react'
+import { Phone, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
@@ -15,12 +15,6 @@ const contactDetails = [
     label: 'Phone',
     value: '(07) 3355 2248',
     href: 'tel:0733552248',
-  },
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'info@revtechmechanical.com.au',
-    href: 'mailto:info@revtechmechanical.com.au',
   },
   {
     icon: MapPin,

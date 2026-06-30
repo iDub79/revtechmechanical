@@ -53,7 +53,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     },
     body: JSON.stringify({
       from: env.CONTACT_FROM,
-      to: env.CONTACT_TO,
+      to: env.CONTACT_TO.split(",").map((addr) => addr.trim()).filter(Boolean),
       reply_to: email,
       subject: `New website enquiry from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\n\n${message}`,

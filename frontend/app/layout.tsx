@@ -74,7 +74,6 @@ const jsonLd = {
   image: `${SITE_URL}/images/hero.png`,
   logo: `${SITE_URL}/images/logo.png`,
   telephone: '+61733552248',
-  email: 'info@revtechmechanical.com.au',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
