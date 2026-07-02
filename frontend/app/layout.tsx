@@ -100,7 +100,7 @@ const jsonLd = {
     longitude: 152.972074,
   },
   areaServed: 'Brisbane Northside, QLD',
-  sameAs: ['https://www.facebook.com/revtechmechanical'],
+  sameAs: ['https://www.facebook.com/revtechmechanical', MAP_URL],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
