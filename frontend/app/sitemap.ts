@@ -6,10 +6,10 @@ const SITE_URL = 'https://www.revtechmechanical.com.au'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/services', '/about', '/contact'].map((path) => ({
+  const staticRoutes = ['/', '/services', '/about', '/contact'].map((path) => ({
     url: `${SITE_URL}${path}`,
     changeFrequency: 'monthly' as const,
-    priority: path === '' ? 1 : 0.8,
+    priority: path === '/' ? 1 : 0.8,
   }))
 
   const serviceRoutes = services.map((s) => ({

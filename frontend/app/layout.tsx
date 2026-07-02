@@ -1,9 +1,19 @@
 import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 const SITE_URL = 'https://www.revtechmechanical.com.au'
+const MAP_URL =
+  'https://www.google.com/maps/place/Rev-Tech+Mechanical/@-27.390812,152.973584,15z/data=!4m6!3m5!1s0x6b9157b6803de80b:0x40d51232ed79821e!8m2!3d-27.3906095!4d152.972074!16s%2Fg%2F1tmk8p28'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -71,10 +81,11 @@ const jsonLd = {
   '@id': `${SITE_URL}/#business`,
   name: 'Rev-Tech Mechanical',
   url: SITE_URL,
-  image: `${SITE_URL}/images/hero.png`,
+  image: `${SITE_URL}/images/og.jpg`,
   logo: `${SITE_URL}/images/logo.png`,
   telephone: '+61733552248',
   priceRange: '$$',
+  hasMap: MAP_URL,
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Unit 2, Building 5, 991 South Pine Rd',
@@ -85,8 +96,8 @@ const jsonLd = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -27.3983,
-    longitude: 152.9743,
+    latitude: -27.3906095,
+    longitude: 152.972074,
   },
   areaServed: 'Brisbane Northside, QLD',
   sameAs: ['https://www.facebook.com/revtechmechanical'],
@@ -106,7 +117,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-AU">
+    <html lang="en-AU" className={inter.variable}>
       <body className="flex flex-col min-h-screen">
         <script
           type="application/ld+json"
@@ -115,6 +126,11 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          strategy="afterInteractive"
+          data-cf-beacon='{"token": "dad84aa8c1844fc5a2c0cd9bc45fbd28"}'
+        />
       </body>
     </html>
   )
