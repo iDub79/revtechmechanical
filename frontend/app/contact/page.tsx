@@ -20,7 +20,7 @@ const contactDetails = [
     icon: MapPin,
     label: 'Address',
     value: 'Unit 2, Building 5, 991 South Pine Rd\nEverton Hills QLD 4053',
-    href: 'https://maps.google.com/?q=991+South+Pine+Rd+Everton+Hills+QLD+4053',
+    href: 'https://www.google.com/maps/place/Rev-Tech+Mechanical/@-27.390812,152.973584,15z/data=!4m15!1m8!3m7!1s0x6b9157b44bcb9e11:0xbf8e45012faeb9fb!2s991+S+Pine+Rd,+Everton+Hills+QLD+4053,+Australia!3b1!8m2!3d-27.3904994!4d152.9718879!16s%2Fg%2F11bw4dfhdb!3m5!1s0x6b9157b6803de80b:0x40d51232ed79821e!8m2!3d-27.3906095!4d152.972074!16s%2Fg%2F1tmk8p28?hl=en-GB&entry=ttu',
   },
   {
     icon: Clock,
@@ -97,7 +97,7 @@ export default function ContactPage() {
               <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
                 <iframe
                   title="Rev-Tech Mechanical location map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.32!2d152.9743!3d-27.3983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9150a5b3e6b8d9%3A0x0!2s991+South+Pine+Rd%2C+Everton+Hills+QLD+4053!5e0!3m2!1sen!2sau!4v1"
+                  src="https://maps.google.com/maps?q=Rev-Tech+Mechanical,+991+S+Pine+Rd,+Everton+Hills+QLD+4053&z=15&output=embed"
                   width="100%"
                   height="220"
                   style={{ border: 0, display: 'block' }}
